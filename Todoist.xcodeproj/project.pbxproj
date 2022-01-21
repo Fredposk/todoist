@@ -11,6 +11,10 @@
 		4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD362798B0FD009C05A6 /* ContentView.swift */; };
 		4096AD392798B0FF009C05A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4096AD382798B0FF009C05A6 /* Assets.xcassets */; };
 		4096AD3C2798B0FF009C05A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4096AD3B2798B0FF009C05A6 /* Preview Assets.xcassets */; };
+		4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD422798B10E009C05A6 /* Main.xcdatamodeld */; };
+		4096AD462798B4E5009C05A6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD452798B4E5009C05A6 /* DataController.swift */; };
+		40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0C94D279B41C20098E3E2 /* HomeView.swift */; };
+		40E0C950279B42600098E3E2 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0C94F279B42600098E3E2 /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		4096AD362798B0FD009C05A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4096AD382798B0FF009C05A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4096AD3B2798B0FF009C05A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4096AD432798B10E009C05A6 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		4096AD452798B4E5009C05A6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4096AD472798C1EC009C05A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		40E0C94D279B41C20098E3E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		40E0C94F279B42600098E3E2 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +60,15 @@
 		4096AD332798B0FD009C05A6 /* Todoist */ = {
 			isa = PBXGroup;
 			children = (
+				4096AD472798C1EC009C05A6 /* Info.plist */,
 				4096AD342798B0FD009C05A6 /* TodoistApp.swift */,
 				4096AD362798B0FD009C05A6 /* ContentView.swift */,
 				4096AD382798B0FF009C05A6 /* Assets.xcassets */,
 				4096AD3A2798B0FF009C05A6 /* Preview Content */,
+				4096AD422798B10E009C05A6 /* Main.xcdatamodeld */,
+				4096AD452798B4E5009C05A6 /* DataController.swift */,
+				40E0C94D279B41C20098E3E2 /* HomeView.swift */,
+				40E0C94F279B42600098E3E2 /* ProjectsView.swift */,
 			);
 			path = Todoist;
 			sourceTree = "<group>";
@@ -137,7 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E0C950279B42600098E3E2 /* ProjectsView.swift in Sources */,
+				4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */,
+				4096AD462798B4E5009C05A6 /* DataController.swift in Sources */,
 				4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */,
+				40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */,
 				4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +290,7 @@
 				DEVELOPMENT_TEAM = 2AS4F3T75B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todoist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +320,7 @@
 				DEVELOPMENT_TEAM = 2AS4F3T75B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todoist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +361,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4096AD422798B10E009C05A6 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4096AD432798B10E009C05A6 /* Main.xcdatamodel */,
+			);
+			currentVersion = 4096AD432798B10E009C05A6 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4096AD292798B0FD009C05A6 /* Project object */;
 }

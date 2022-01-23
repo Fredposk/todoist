@@ -9,7 +9,7 @@ import CoreData
 import SwiftUI
 
 class DataController: ObservableObject {
-    let container: NSPersistentCloudKitContainer
+    let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
@@ -26,16 +26,17 @@ class DataController: ObservableObject {
     }
 
     //MARK: for previews
-    static var preview: DataController = {
-        let dataController = DataController(inMemory: true)
-
-        do {
-            try dataController.createSampleData()
-        } catch {
-            fatalError("Fatal error")
-        }
-        return dataController
-    }()
+//    static var preview: DataController = {
+//        let dataController = DataController(inMemory: true)
+//
+//        do {
+//            try dataController.createSampleData()
+//        } catch {
+//            fatalError("Fatal error")
+//        }
+//        return dataController
+//    }()
+    ///
 
     func createSampleData() throws {
         let viewContext = container.viewContext
@@ -78,5 +79,4 @@ class DataController: ObservableObject {
         let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
         _ = try? container.viewContext.execute(batchDeleteRequest2)
     }
-
 }

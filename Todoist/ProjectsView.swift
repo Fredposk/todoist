@@ -32,7 +32,7 @@ struct ProjectsView: View {
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
-                .navigationTitle(showClosedProjects ? "closed Projects" : "Open Projects")
+                .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             }
         }
     }

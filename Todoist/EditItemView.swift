@@ -18,9 +18,7 @@ struct EditItemView: View {
     @State private var completed: Bool
 
     init(item: Item) {
-//        _item = ObservedObject(initialValue: item)
         self.item = item
-
 
         _title = State(wrappedValue: item.itemTitle)
         _detail = State(wrappedValue: item.itemDetail)
@@ -31,14 +29,14 @@ struct EditItemView: View {
     var body: some View {
         Form {
             Section {
-                TextField("Item Name", text: $title)
+                TextField("Item Name", text: $title.onChange(update))
                 TextField("Description", text: $detail)
 
             } header: {
                 Text("Basic Settings")
             }
             Section {
-                Picker("Priority", selection: $priority) {
+                Picker("Priority", selection: $priority.onChange(update)) {
                     Text("Low").tag(1)
                     Text("Medium").tag(2)
                     Text("High").tag(3)
@@ -49,14 +47,14 @@ struct EditItemView: View {
                 Text("Priority")
             }
             Section {
-             Toggle("Mark Completed", isOn: $completed)
+                Toggle("Mark Completed", isOn: $completed.onChange(update))
             } header: {
                 Text("Completed")
             }
 
         }
         .navigationTitle("Edit Item")
-        .onDisappear { update() }
+        .onDisappear(perform: dataController.save)
     }
 
 

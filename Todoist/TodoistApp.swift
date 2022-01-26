@@ -22,6 +22,12 @@ struct TodoistApp: App {
             ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(dataController)
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                    dataController.save()
+                }
         }
+    }
+    func save(_ note: Notification) {
+        dataController.save()
     }
 }

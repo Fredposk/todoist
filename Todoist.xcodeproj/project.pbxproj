@@ -20,6 +20,7 @@
 		4096AD3C2798B0FF009C05A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4096AD3B2798B0FF009C05A6 /* Preview Assets.xcassets */; };
 		4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD422798B10E009C05A6 /* Main.xcdatamodeld */; };
 		4096AD462798B4E5009C05A6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD452798B4E5009C05A6 /* DataController.swift */; };
+		40AB920327A694DC00414070 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AB920227A694DC00414070 /* EditProjectView.swift */; };
 		40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0C94D279B41C20098E3E2 /* HomeView.swift */; };
 		40E0C950279B42600098E3E2 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0C94F279B42600098E3E2 /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		4096AD432798B10E009C05A6 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		4096AD452798B4E5009C05A6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4096AD472798C1EC009C05A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		40AB920227A694DC00414070 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		40E0C94D279B41C20098E3E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		40E0C94F279B42600098E3E2 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				40E0C94D279B41C20098E3E2 /* HomeView.swift */,
 				40E0C94F279B42600098E3E2 /* ProjectsView.swift */,
 				406B604C27A067F000B22951 /* ItemRowView.swift */,
+				40AB920227A694DC00414070 /* EditProjectView.swift */,
 			);
 			path = Todoist;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				406B607127A1E29C00B22951 /* ProjectHeaderView.swift in Sources */,
 				4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */,
 				4075C328279F3F460058B900 /* Project-CoreDataHelpers.swift in Sources */,
+				40AB920327A694DC00414070 /* EditProjectView.swift in Sources */,
 				4096AD462798B4E5009C05A6 /* DataController.swift in Sources */,
 				406B604D27A067F000B22951 /* ItemRowView.swift in Sources */,
 				4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */,

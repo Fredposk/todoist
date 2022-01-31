@@ -15,6 +15,8 @@ struct ProjectsView: View {
     @EnvironmentObject var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
 
+    @State private var showingSortOrder: Bool = false
+
     let showClosedProjects: Bool
 
     let projects: FetchRequest<Project>
@@ -33,7 +35,7 @@ struct ProjectsView: View {
             List {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems) { item in
+                        ForEach(items(for: project)) { item in
                             ItemRowView(item: item)
                         }
                         .onDelete { offsets in
@@ -79,7 +81,18 @@ struct ProjectsView: View {
                     }
                 }
             }
+            .actionSheet(isPresented: $showingSortOrder) {
+                ActionSheet(title: Text("Sort items"), message: nil, buttons: [
+                    .default(Text("Optimized")) {  },
+                    .default(Text("Creation Date")) {  },
+                    .default(Text("Title")) {  }
+                ])
+            }
         }
+    }
+    func items(for project: Project) -> [Item] {
+        #warning("stopped here")
+       return project.projectItemsDefaultSorted
     }
 }
 

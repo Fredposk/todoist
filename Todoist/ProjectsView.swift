@@ -16,6 +16,7 @@ struct ProjectsView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
 
     @State private var showingSortOrder: Bool = false
+    @State private var sortOrder = Item.SortOrder.optimized
 
     let showClosedProjects: Bool
 
@@ -35,7 +36,7 @@ struct ProjectsView: View {
             List {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(items(for: project)) { item in
+                        ForEach(project.projectItems(using: sortOrder)) { item in
                             ItemRowView(item: item)
                         }
                         .onDelete { offsets in
@@ -65,8 +66,9 @@ struct ProjectsView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
-
-                .toolbar {
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     if showClosedProjects == false {
                         Button {
                             withAnimation {
@@ -80,19 +82,23 @@ struct ProjectsView: View {
                         }
                     }
                 }
+
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingSortOrder.toggle()
+                    } label: {
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                    }
+                }
             }
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort items"), message: nil, buttons: [
-                    .default(Text("Optimized")) {  },
-                    .default(Text("Creation Date")) {  },
-                    .default(Text("Title")) {  }
+                    .default(Text("Optimized")) { sortOrder = .optimized },
+                    .default(Text("Creation Date")) { sortOrder = .creationDate },
+                    .default(Text("Title")) { sortOrder = .title }
                 ])
             }
         }
-    }
-    func items(for project: Project) -> [Item] {
-        #warning("stopped here")
-       return project.projectItemsDefaultSorted
     }
 }
 

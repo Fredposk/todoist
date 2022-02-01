@@ -14,6 +14,7 @@
 		406B607527A1EB1800B22951 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406B607427A1EB1800B22951 /* Colors.xcassets */; };
 		4075C326279F3DB30058B900 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075C325279F3DB30058B900 /* Item-CoreDataHelpers.swift */; };
 		4075C328279F3F460058B900 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */; };
+		4084C8A227A9C1CB00EC94E6 /* SequenceSorting+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */; };
 		4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD342798B0FD009C05A6 /* TodoistApp.swift */; };
 		4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD362798B0FD009C05A6 /* ContentView.swift */; };
 		4096AD392798B0FF009C05A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4096AD382798B0FF009C05A6 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		406B607427A1EB1800B22951 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4075C325279F3DB30058B900 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SequenceSorting+Ext.swift"; sourceTree = "<group>"; };
 		4096AD312798B0FD009C05A6 /* Todoist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4096AD342798B0FD009C05A6 /* TodoistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistApp.swift; sourceTree = "<group>"; };
 		4096AD362798B0FD009C05A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				4096AD452798B4E5009C05A6 /* DataController.swift */,
 				40E0C94D279B41C20098E3E2 /* HomeView.swift */,
 				40E0C94F279B42600098E3E2 /* ProjectsView.swift */,
+				4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */,
 				406B604C27A067F000B22951 /* ItemRowView.swift */,
 				40AB920227A694DC00414070 /* EditProjectView.swift */,
 			);
@@ -183,6 +186,7 @@
 				40AB920327A694DC00414070 /* EditProjectView.swift in Sources */,
 				4096AD462798B4E5009C05A6 /* DataController.swift in Sources */,
 				406B604D27A067F000B22951 /* ItemRowView.swift in Sources */,
+				4084C8A227A9C1CB00EC94E6 /* SequenceSorting+Ext.swift in Sources */,
 				4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */,
 				406B606D27A1D6AF00B22951 /* Binding-OnChange.swift in Sources */,
 				40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */,

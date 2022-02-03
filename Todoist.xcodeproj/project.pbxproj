@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		405CD41D27AB1C17005BDEE3 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405CD41C27AB1C17005BDEE3 /* SelectSomethingView.swift */; };
+		405D51EB27AC41BF005C73EA /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 405D51EA27AC41BF005C73EA /* Awards.json */; };
+		405D51ED27AC424D005C73EA /* Bundle-Decodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D51EC27AC424D005C73EA /* Bundle-Decodable+Ext.swift */; };
+		405D51EF27AC4BC5005C73EA /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D51EE27AC4BC5005C73EA /* Award.swift */; };
+		405D51F127AC4C84005C73EA /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D51F027AC4C84005C73EA /* AwardsView.swift */; };
 		406B604B27A05BD300B22951 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B604A27A05BD300B22951 /* EditItemView.swift */; };
 		406B604D27A067F000B22951 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B604C27A067F000B22951 /* ItemRowView.swift */; };
 		406B606D27A1D6AF00B22951 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B606C27A1D6AF00B22951 /* Binding-OnChange.swift */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		405CD41C27AB1C17005BDEE3 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
+		405D51EA27AC41BF005C73EA /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		405D51EC27AC424D005C73EA /* Bundle-Decodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable+Ext.swift"; sourceTree = "<group>"; };
+		405D51EE27AC4BC5005C73EA /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		405D51F027AC4C84005C73EA /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		406B604A27A05BD300B22951 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		406B604C27A067F000B22951 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		406B606C27A1D6AF00B22951 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -80,6 +88,9 @@
 		4096AD332798B0FD009C05A6 /* Todoist */ = {
 			isa = PBXGroup;
 			children = (
+				405D51EC27AC424D005C73EA /* Bundle-Decodable+Ext.swift */,
+				405D51EE27AC4BC5005C73EA /* Award.swift */,
+				405D51F027AC4C84005C73EA /* AwardsView.swift */,
 				4096AD472798C1EC009C05A6 /* Info.plist */,
 				4096AD342798B0FD009C05A6 /* TodoistApp.swift */,
 				4096AD362798B0FD009C05A6 /* ContentView.swift */,
@@ -99,6 +110,7 @@
 				4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */,
 				406B604C27A067F000B22951 /* ItemRowView.swift */,
 				40AB920227A694DC00414070 /* EditProjectView.swift */,
+				405D51EA27AC41BF005C73EA /* Awards.json */,
 			);
 			path = Todoist;
 			sourceTree = "<group>";
@@ -170,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406B607527A1EB1800B22951 /* Colors.xcassets in Resources */,
+				405D51EB27AC41BF005C73EA /* Awards.json in Resources */,
 				4096AD3C2798B0FF009C05A6 /* Preview Assets.xcassets in Resources */,
 				4096AD392798B0FF009C05A6 /* Assets.xcassets in Resources */,
 			);
@@ -184,15 +197,18 @@
 			files = (
 				40E0C950279B42600098E3E2 /* ProjectsView.swift in Sources */,
 				406B607127A1E29C00B22951 /* ProjectHeaderView.swift in Sources */,
+				405D51F127AC4C84005C73EA /* AwardsView.swift in Sources */,
 				4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */,
 				4075C328279F3F460058B900 /* Project-CoreDataHelpers.swift in Sources */,
 				40AB920327A694DC00414070 /* EditProjectView.swift in Sources */,
 				4096AD462798B4E5009C05A6 /* DataController.swift in Sources */,
 				405CD41D27AB1C17005BDEE3 /* SelectSomethingView.swift in Sources */,
+				405D51EF27AC4BC5005C73EA /* Award.swift in Sources */,
 				406B604D27A067F000B22951 /* ItemRowView.swift in Sources */,
 				4084C8A227A9C1CB00EC94E6 /* SequenceSorting+Ext.swift in Sources */,
 				4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */,
 				406B606D27A1D6AF00B22951 /* Binding-OnChange.swift in Sources */,
+				405D51ED27AC424D005C73EA /* Bundle-Decodable+Ext.swift in Sources */,
 				40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */,
 				4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */,
 				4075C326279F3DB30058B900 /* Item-CoreDataHelpers.swift in Sources */,

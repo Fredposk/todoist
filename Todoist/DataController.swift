@@ -39,16 +39,18 @@ class DataController: ObservableObject {
     ///
 
     func createSampleData() throws {
+        deleteAll()
+        
         let viewContext = container.viewContext
 
-        for i in 1...5 {
+        for i in 1...10 {
             let project = Project(context: viewContext)
             project.title = "Project \(i)"
             project.items = []
             project.creationDate = Date()
             project.closed = Bool.random()
 
-            for j in 1...10 {
+            for j in 1...7 {
                 let item = Item(context: viewContext)
                 item.title = "\(j)"
                 item.creationDate = Date()
@@ -78,5 +80,30 @@ class DataController: ObservableObject {
         let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Project.fetchRequest()
         let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
         _ = try? container.viewContext.execute(batchDeleteRequest2)
+    }
+
+    func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
+        (try? container.viewContext.count(for: fetchRequest)) ?? 0
+    }
+
+    func hasEarned(award: Award) -> Bool {
+        switch award.criterion {
+
+        case "items":
+            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
+            let awardCount = count(for: fetchRequest)
+            return awardCount >= award.value
+
+        case "complete":
+            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
+            fetchRequest.predicate = NSPredicate(format: "completed = true")
+            let awardCount = count(for: fetchRequest)
+            return awardCount >= award.value
+
+        default:
+//            fatalError("unknown award criterion: \(award.criterion)")
+            return false
+        }
+
     }
 }

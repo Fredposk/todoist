@@ -33,11 +33,13 @@ struct ProjectsView: View {
 
     var body: some View {
         NavigationView {
+            
             Group {
                 if projects.wrappedValue.isEmpty {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
                 } else {
+
                     List {
                         ForEach(projects.wrappedValue) { project in
                             Section(header: ProjectHeaderView(project: project)) {

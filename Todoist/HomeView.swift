@@ -61,6 +61,8 @@ struct HomeView: View {
                                 .background(Color.secondarySystemGroupedBackground)
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.5), radius: 5)
+                                .accessibilityElement(children: .ignore)
+                                .accessibilityLabel("\(project.projectTitle), \(project.projectItems.count) items, \(project.completionAmount * 100, specifier: "%g")% complete")
                             }
                         }
                         .padding([.horizontal, .top])
@@ -75,6 +77,7 @@ struct HomeView: View {
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
         }
+        .navigationViewStyle(.stack)
     }
 
     @ViewBuilder func list(_ title: LocalizedStringKey, for items: FetchedResults<Item>.SubSequence) -> some View {
@@ -90,7 +93,7 @@ struct HomeView: View {
                 NavigationLink(destination: EditItemView(item: item)) {
                     HStack(spacing: 20) {
                         Circle()
-                            .stroke(Color(item.project?.projectColor ?? "Light BLue"), lineWidth: 3)
+                            .stroke(Color(item.project?.projectColor ?? "Light Blue"), lineWidth: 3)
                             .frame(width: 44, height: 44)
 
                         VStack(alignment: .leading) {

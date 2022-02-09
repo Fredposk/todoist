@@ -31,40 +31,18 @@ struct EditProjectView: View {
 
     var body: some View {
         Form {
-
             Section(header: Text("Basic settings")) {
                 TextField("Project Name", text: $title.onChange(update))
                 TextField("Project Description", text: $detail.onChange(update))
             }
-
             Section(header: Text("Custom Project Colour")) {
                 LazyVGrid(columns: colorColumns) {
                     ForEach(Project.colours, id: \.self) { item in
-                        ZStack {
-                            Color(item)
-                                .aspectRatio(1, contentMode: .fit)
-                                .cornerRadius(6)
-                            if item == colour {
-                                Image(systemName: "checkmark.circle")
-                                    .foregroundColor(.white)
-                                    .font(.largeTitle)
-                            }
-                        }
-                        .onTapGesture {
-                            colour = item
-                            update()
-                        }
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityAddTraits(
-                            item == colour
-                            ? [.isButton, .isSelected]
-                            : .isButton)
-                        .accessibility(label: Text(LocalizedStringKey(String("\(item)"))))
+                        colourButton(from: item)
                     }
                 }
                 .padding()
             }
-
             Section(footer: Text("Closing a Project moves it from the open tab; deleting it removes the project entirely")) {
                 Button(project.closed ? "Reopen this project" : "Close this Project") {
                     project.closed.toggle()
@@ -81,6 +59,29 @@ struct EditProjectView: View {
         .alert(isPresented: $showConfirmDelete) {
             Alert(title: Text("Delete Project?"), message: Text("Are you sure you want to delete this project, deleting also deletes all items"), primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
         }
+    }
+
+    func colourButton(from item: String) -> some View {
+        ZStack {
+            Color(item)
+                .aspectRatio(1, contentMode: .fit)
+                .cornerRadius(6)
+            if item == colour {
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+            }
+        }
+        .onTapGesture {
+            colour = item
+            update()
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(
+            item == colour
+            ? [.isButton, .isSelected]
+            : .isButton)
+        .accessibility(label: Text(LocalizedStringKey(String("\(item)"))))
     }
 
     func update() {

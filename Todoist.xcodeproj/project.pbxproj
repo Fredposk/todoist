@@ -27,6 +27,8 @@
 		4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD422798B10E009C05A6 /* Main.xcdatamodeld */; };
 		4096AD462798B4E5009C05A6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD452798B4E5009C05A6 /* DataController.swift */; };
 		40AB920327A694DC00414070 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AB920227A694DC00414070 /* EditProjectView.swift */; };
+		40B533A527B44A9C00D6714F /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B533A427B44A9C00D6714F /* ItemListView.swift */; };
+		40B533A727B44B5000D6714F /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B533A627B44B5000D6714F /* ProjectSummaryView.swift */; };
 		40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0C94D279B41C20098E3E2 /* HomeView.swift */; };
 		40E0C950279B42600098E3E2 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0C94F279B42600098E3E2 /* ProjectsView.swift */; };
 		40EA931C27B1B08B00278227 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 40EA931B27B1B08B00278227 /* Localizable.stringsdict */; };
@@ -57,6 +59,8 @@
 		4096AD452798B4E5009C05A6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4096AD472798C1EC009C05A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		40AB920227A694DC00414070 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		40B533A427B44A9C00D6714F /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		40B533A627B44B5000D6714F /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		40E0C94D279B41C20098E3E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		40E0C94F279B42600098E3E2 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		40EA931B27B1B08B00278227 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				4096AD422798B10E009C05A6 /* Main.xcdatamodeld */,
 				4096AD452798B4E5009C05A6 /* DataController.swift */,
 				40E0C94D279B41C20098E3E2 /* HomeView.swift */,
+				40B533A627B44B5000D6714F /* ProjectSummaryView.swift */,
+				40B533A427B44A9C00D6714F /* ItemListView.swift */,
 				40EA931F27B1BD0100278227 /* Localizable.strings */,
 				40EA931B27B1B08B00278227 /* Localizable.stringsdict */,
 				405D51F227AC6D26005C73EA /* Color-Additions.swift */,
@@ -210,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E0C950279B42600098E3E2 /* ProjectsView.swift in Sources */,
+				40B533A727B44B5000D6714F /* ProjectSummaryView.swift in Sources */,
 				406B607127A1E29C00B22951 /* ProjectHeaderView.swift in Sources */,
 				405D51F127AC4C84005C73EA /* AwardsView.swift in Sources */,
 				4096AD442798B10E009C05A6 /* Main.xcdatamodeld in Sources */,
@@ -224,6 +231,7 @@
 				4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */,
 				406B606D27A1D6AF00B22951 /* Binding-OnChange.swift in Sources */,
 				405D51ED27AC424D005C73EA /* Bundle-Decodable+Ext.swift in Sources */,
+				40B533A527B44A9C00D6714F /* ItemListView.swift in Sources */,
 				40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */,
 				4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */,
 				4075C326279F3DB30058B900 /* Item-CoreDataHelpers.swift in Sources */,

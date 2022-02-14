@@ -28,7 +28,15 @@ struct HomeView: View {
 
     init() {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
-        request.predicate = NSPredicate(format: "completed = false")
+//        request.predicate = NSPredicate(format: "completed = false")
+
+        let completedPredicate = NSPredicate(format: "completed = false")
+        let openPredicate = NSPredicate(format: "project.closed = false")
+
+        let compoundedPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
+
+        request.predicate = compoundedPredicate
+
 
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
 
@@ -58,6 +66,12 @@ struct HomeView: View {
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
+            .toolbar {
+                Button("add data") {
+                    dataController.deleteAll()
+                    try? dataController.createSampleData()
+                }
+            }
         }
         .navigationViewStyle(.stack)
     }

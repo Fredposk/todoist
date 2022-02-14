@@ -14,10 +14,10 @@
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="detail" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="project" inverseEntity="Item"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Item" inverseName="project" inverseEntity="Item"/>
     </entity>
     <elements>
-        <element name="Project" positionX="-144.3184814453125" positionY="-288.95361328125" width="128" height="133"/>
         <element name="Item" positionX="157.558349609375" positionY="-150.6940307617188" width="128" height="133"/>
+        <element name="Project" positionX="-144.3184814453125" positionY="-288.95361328125" width="128" height="119"/>
     </elements>
 </model>

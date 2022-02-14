@@ -21,7 +21,6 @@ struct EditProjectView: View {
 
     let colorColumns = [GridItem(.adaptive(minimum: 44))]
 
-
     init(project: Project) {
         self.project = project
         _title = State(wrappedValue: project.projectTitle)
@@ -43,7 +42,7 @@ struct EditProjectView: View {
                 }
                 .padding()
             }
-            Section(footer: Text("Closing a Project moves it from the open tab; deleting it removes the project entirely")) {
+            Section(footer: Text("Closing a Project moves it from the open tab; deleting it removes the project entirely")) { // swiftlint:disable:this line_length
                 Button(project.closed ? "Reopen this project" : "Close this Project") {
                     project.closed.toggle()
                     update()
@@ -52,12 +51,12 @@ struct EditProjectView: View {
                     showConfirmDelete.toggle()
                 }.accentColor(.red)
             }
-            
         }
         .navigationTitle("Edit Project")
         .onDisappear(perform: dataController.save)
         .alert(isPresented: $showConfirmDelete) {
-            Alert(title: Text("Delete Project?"), message: Text("Are you sure you want to delete this project, deleting also deletes all items"), primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
+            Alert(title: Text("Delete Project?"), message: Text("Are you sure you want to delete this project, deleting also deletes all items"), // swiftlint:disable:this line_length
+                  primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
         }
     }
 
@@ -96,8 +95,8 @@ struct EditProjectView: View {
     }
 }
 
-//struct EditProjectView_Previews: PreviewProvider {
+// struct EditProjectView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        EditProjectView()
 //    }
-//}
+// }

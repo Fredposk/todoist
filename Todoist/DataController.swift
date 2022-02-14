@@ -18,14 +18,14 @@ class DataController: ObservableObject {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }
 
-        container.loadPersistentStores { storeDescription, error in
+        container.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Fatal error loading error: \(error.localizedDescription)")
             }
         }
     }
 
-    //MARK: for previews
+    // MARK: for previews
 //    static var preview: DataController = {
 //        let dataController = DataController(inMemory: true)
 //
@@ -36,23 +36,21 @@ class DataController: ObservableObject {
 //        }
 //        return dataController
 //    }()
-    ///
 
     func createSampleData() throws {
         deleteAll()
-        
         let viewContext = container.viewContext
 
-        for i in 1...10 {
+        for projectCounter in 1...10 {
             let project = Project(context: viewContext)
-            project.title = "Project \(i)"
+            project.title = "Project \(projectCounter)"
             project.items = []
             project.creationDate = Date()
             project.closed = Bool.random()
 
-            for j in 1...7 {
+            for itemCounter in 1...7 {
                 let item = Item(context: viewContext)
-                item.title = "\(j)"
+                item.title = "\(itemCounter)"
                 item.creationDate = Date()
                 item.completed = Bool.random()
                 item.project = project

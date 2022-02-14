@@ -134,8 +134,8 @@ struct ProjectsView: View {
     }
 }
 
-//struct ProjectsView_Previews: PreviewProvider {
+// struct ProjectsView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ProjectsView()
 //    }
-//}
+// }

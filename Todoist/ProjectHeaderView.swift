@@ -17,9 +17,7 @@ struct ProjectHeaderView: View {
                 ProgressView(value: project.completionAmount)
                     .accentColor(Color(project.projectColor))
             }
-
             Spacer()
-
             NavigationLink(destination: EditProjectView(project: project)) {
                 Image(systemName: "square.and.pencil")
                     .imageScale(.large)
@@ -30,10 +28,8 @@ struct ProjectHeaderView: View {
     }
 }
 
-
-//
-//struct ProjectHeaderView_Previews: PreviewProvider {
+// struct ProjectHeaderView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ProjectHeaderView()
 //    }
-//}
+// }

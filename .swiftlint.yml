@@ -1,0 +1,5 @@
+  GNU nano 2.0.6                    File: .swiftlint.yml                                     Modified
+
+identifier_name:
+  excluded:
+   - id

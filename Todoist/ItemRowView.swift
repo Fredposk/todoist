@@ -23,7 +23,7 @@ struct ItemRowView: View {
     }
 
     var icon: some View {
-        if item.completed  {
+        if item.completed {
             return Image(systemName: "checkmark.circle")
                 .foregroundColor(Color(project.projectColor))
         } else if item.priority == 3 {
@@ -35,7 +35,6 @@ struct ItemRowView: View {
         }
     }
 
-    
     var body: some View {
         NavigationLink(destination: EditItemView(item: item)) {
             Label {
@@ -48,8 +47,8 @@ struct ItemRowView: View {
     }
 }
 
-//struct ItemRowView_Previews: PreviewProvider {
+// struct ItemRowView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ItemRowView()
 //    }
-//}
+// }

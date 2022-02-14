@@ -8,16 +8,14 @@
 import CoreData
 import SwiftUI
 
-
-
 struct HomeView: View {
     static let tag: String? = "Home"
 
     @EnvironmentObject var dataController: DataController
 
-    @FetchRequest(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
+    @FetchRequest(entity: Project.entity(),
+                  sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
                   predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
-
 
     let items: FetchRequest<Item>
 
@@ -25,10 +23,8 @@ struct HomeView: View {
         [GridItem(.fixed(100))]
     }
 
-
     init() {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
-//        request.predicate = NSPredicate(format: "completed = false")
 
         let completedPredicate = NSPredicate(format: "completed = false")
         let openPredicate = NSPredicate(format: "project.closed = false")
@@ -36,7 +32,6 @@ struct HomeView: View {
         let compoundedPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
 
         request.predicate = compoundedPredicate
-
 
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
 
@@ -46,7 +41,7 @@ struct HomeView: View {
     }
 
     var body: some View {
-        NavigationView{
+        NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -75,8 +70,6 @@ struct HomeView: View {
         }
         .navigationViewStyle(.stack)
     }
-
-
 }
 
 struct HomeView_Previews: PreviewProvider {

@@ -57,7 +57,7 @@
 		4096AD3B2798B0FF009C05A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4096AD432798B10E009C05A6 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		4096AD452798B4E5009C05A6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		4096AD472798C1EC009C05A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4096AD472798C1EC009C05A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40AB920227A694DC00414070 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		40B533A427B44A9C00D6714F /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		40B533A627B44B5000D6714F /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
@@ -81,6 +81,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4052947527BC472D009A5289 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4075C325279F3DB30058B900 /* Item-CoreDataHelpers.swift */,
+				4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */,
+				405D51EC27AC424D005C73EA /* Bundle-Decodable+Ext.swift */,
+				405D51F227AC6D26005C73EA /* Color-Additions.swift */,
+				4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */,
+				406B606C27A1D6AF00B22951 /* Binding-OnChange.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4052947727BC4760009A5289 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				40EA931F27B1BD0100278227 /* Localizable.strings */,
+				40EA931B27B1B08B00278227 /* Localizable.stringsdict */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		4052947827BC476A009A5289 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4096AD422798B10E009C05A6 /* Main.xcdatamodeld */,
+				4096AD472798C1EC009C05A6 /* Info.plist */,
+				406B607427A1EB1800B22951 /* Colors.xcassets */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4052947927BC49FF009A5289 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				4052947C27BC4A28009A5289 /* Awards */,
+				4052947A27BC4A11009A5289 /* Home */,
+				4052947B27BC4A18009A5289 /* Projects */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		4052947A27BC4A11009A5289 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				40E0C94D279B41C20098E3E2 /* HomeView.swift */,
+				40B533A427B44A9C00D6714F /* ItemListView.swift */,
+				40B533A627B44B5000D6714F /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4052947B27BC4A18009A5289 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				40E0C94F279B42600098E3E2 /* ProjectsView.swift */,
+				405CD41C27AB1C17005BDEE3 /* SelectSomethingView.swift */,
+				406B607027A1E29C00B22951 /* ProjectHeaderView.swift */,
+				40AB920227A694DC00414070 /* EditProjectView.swift */,
+				406B604C27A067F000B22951 /* ItemRowView.swift */,
+				406B604A27A05BD300B22951 /* EditItemView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		4052947C27BC4A28009A5289 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				405D51F027AC4C84005C73EA /* AwardsView.swift */,
+				405D51EE27AC4BC5005C73EA /* Award.swift */,
+				40EA932327B1BE4A00278227 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
 		4096AD282798B0FD009C05A6 = {
 			isa = PBXGroup;
 			children = (
@@ -100,34 +175,15 @@
 		4096AD332798B0FD009C05A6 /* Todoist */ = {
 			isa = PBXGroup;
 			children = (
-				405D51EC27AC424D005C73EA /* Bundle-Decodable+Ext.swift */,
-				405D51EE27AC4BC5005C73EA /* Award.swift */,
-				405D51F027AC4C84005C73EA /* AwardsView.swift */,
-				4096AD472798C1EC009C05A6 /* Info.plist */,
-				4096AD342798B0FD009C05A6 /* TodoistApp.swift */,
 				4096AD362798B0FD009C05A6 /* ContentView.swift */,
-				406B604A27A05BD300B22951 /* EditItemView.swift */,
-				406B606C27A1D6AF00B22951 /* Binding-OnChange.swift */,
-				406B607027A1E29C00B22951 /* ProjectHeaderView.swift */,
-				4075C325279F3DB30058B900 /* Item-CoreDataHelpers.swift */,
-				4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */,
-				4096AD382798B0FF009C05A6 /* Assets.xcassets */,
-				406B607427A1EB1800B22951 /* Colors.xcassets */,
-				4096AD3A2798B0FF009C05A6 /* Preview Content */,
-				4096AD422798B10E009C05A6 /* Main.xcdatamodeld */,
+				4052947927BC49FF009A5289 /* Activities */,
+				4052947827BC476A009A5289 /* Configuration */,
+				4052947727BC4760009A5289 /* Localization */,
+				4052947527BC472D009A5289 /* Extensions */,
+				4096AD342798B0FD009C05A6 /* TodoistApp.swift */,
 				4096AD452798B4E5009C05A6 /* DataController.swift */,
-				40E0C94D279B41C20098E3E2 /* HomeView.swift */,
-				40B533A627B44B5000D6714F /* ProjectSummaryView.swift */,
-				40B533A427B44A9C00D6714F /* ItemListView.swift */,
-				40EA931F27B1BD0100278227 /* Localizable.strings */,
-				40EA931B27B1B08B00278227 /* Localizable.stringsdict */,
-				405D51F227AC6D26005C73EA /* Color-Additions.swift */,
-				40E0C94F279B42600098E3E2 /* ProjectsView.swift */,
-				405CD41C27AB1C17005BDEE3 /* SelectSomethingView.swift */,
-				4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */,
-				406B604C27A067F000B22951 /* ItemRowView.swift */,
-				40AB920227A694DC00414070 /* EditProjectView.swift */,
-				40EA932327B1BE4A00278227 /* Awards.json */,
+				4096AD382798B0FF009C05A6 /* Assets.xcassets */,
+				4096AD3A2798B0FF009C05A6 /* Preview Content */,
 			);
 			path = Todoist;
 			sourceTree = "<group>";
@@ -390,7 +446,7 @@
 				DEVELOPMENT_TEAM = 2AS4F3T75B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Todoist/Info.plist;
+				INFOPLIST_FILE = Todoist/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,7 +476,7 @@
 				DEVELOPMENT_TEAM = 2AS4F3T75B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Todoist/Info.plist;
+				INFOPLIST_FILE = Todoist/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

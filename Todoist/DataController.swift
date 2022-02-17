@@ -9,10 +9,11 @@ import CoreData
 import SwiftUI
 
 class DataController: ObservableObject {
+
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentContainer(name: "Main")
 
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
@@ -41,14 +42,14 @@ class DataController: ObservableObject {
         deleteAll()
         let viewContext = container.viewContext
 
-        for projectCounter in 1...10 {
+        for projectCounter in 1...5 {
             let project = Project(context: viewContext)
             project.title = "Project \(projectCounter)"
             project.items = []
             project.creationDate = Date()
             project.closed = Bool.random()
 
-            for itemCounter in 1...7 {
+            for itemCounter in 1...10 {
                 let item = Item(context: viewContext)
                 item.title = "\(itemCounter)"
                 item.creationDate = Date()

@@ -13,7 +13,7 @@ class DataController: ObservableObject {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: DataController.model)
 
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
@@ -26,17 +26,27 @@ class DataController: ObservableObject {
         }
     }
 
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file")
+        }
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file")
+        }
+        return managedObjectModel
+    }()
+
     // MARK: for previews
-//    static var preview: DataController = {
-//        let dataController = DataController(inMemory: true)
-//
-//        do {
-//            try dataController.createSampleData()
-//        } catch {
-//            fatalError("Fatal error")
-//        }
-//        return dataController
-//    }()
+    static var preview: DataController = {
+        let dataController = DataController(inMemory: true)
+
+        do {
+            try dataController.createSampleData()
+        } catch {
+            fatalError("Fatal error")
+        }
+        return dataController
+    }()
 
     func createSampleData() throws {
         

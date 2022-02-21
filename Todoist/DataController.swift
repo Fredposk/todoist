@@ -39,7 +39,7 @@ class DataController: ObservableObject {
 //    }()
 
     func createSampleData() throws {
-        deleteAll()
+        
         let viewContext = container.viewContext
 
         for projectCounter in 1...5 {

@@ -9,6 +9,7 @@ import CoreData
 import SwiftUI
 
 struct HomeView: View {
+
     static let tag: String? = "Home"
 
     @EnvironmentObject var dataController: DataController
@@ -70,6 +71,7 @@ struct HomeView: View {
         }
         .navigationViewStyle(.stack)
     }
+
 }
 
 struct HomeView_Previews: PreviewProvider {

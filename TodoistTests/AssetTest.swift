@@ -10,7 +10,6 @@ import XCTest
 
 class AssetTest: XCTestCase {
 
-
     func testColorsExist() {
         for color in Project.colours {
             XCTAssertNotNil(UIColor(named: color), "Failed to load '\(color)' from asset")
@@ -20,6 +19,4 @@ class AssetTest: XCTestCase {
     func testJSONLoadsCorrectly() {
         XCTAssertFalse(Award.allAwards.isEmpty, "Failed to load awards from JSON")
     }
-
-
 }

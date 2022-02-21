@@ -28,7 +28,6 @@ class AwardTests: BaseTestCase {
 
     func test_AddingItems() {
         let values = [1, 10, 20, 50, 100, 250, 500, 1000]
-
         for (count, value) in values.enumerated() {
             var items = [Item]()
 
@@ -45,7 +44,6 @@ class AwardTests: BaseTestCase {
                 dataController.delete(item)
             }
         }
-
     }
 
     func test_CompletedItems() {
@@ -69,7 +67,4 @@ class AwardTests: BaseTestCase {
             }
         }
     }
-
-    
-
 }

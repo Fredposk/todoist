@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import Todoist
+import SwiftUI
 
 class ExtensionTests: XCTestCase {
     func test_SequenceSortingSelf() {
@@ -16,29 +17,45 @@ class ExtensionTests: XCTestCase {
         XCTAssertEqual(sortedItems, [1, 2, 3, 4, 5], "Items should be sorted")
     }
 
-    func test_SequenceSortingComparable() {
-
-        struct Example: Comparable {
-
-            var value: String
-
-            static func <(lhs: Example, rhs: Example) -> Bool {
-                return lhs.value < rhs.value
-            }
-        }
-
-        let example1 = Example(value: "a")
-        let example2 = Example(value: "b")
-        let example3 = Example(value: "c")
-
-        let examples = [example1, example3, example3]
-
-        let sortedExamples = examples.sorted(by: \.self)
-
-        XCTAssertEqual(sortedExamples, [example1, example2, example3], "Examples should be sorted")
-
-
+    func test_BundleDecodingAwards() {
+        let awards = Bundle.main.decode([Award].self, from: "Awards.json")
+        XCTAssertFalse(awards.isEmpty, "Awards.json should decode to a non-empty array")
     }
 
+    func test_DecodingString() {
+        let bundle = Bundle(for: ExtensionTests.self)
+        let data = bundle.decode(String.self, from: "DecodableString.json")
+        XCTAssertEqual(data, "Cause haters gonna hate",
+                       "The test string must match the bundled string in decodableString.json")
+    }
 
+    func test_DecodingDictionary() {
+        let bundle = Bundle(for: ExtensionTests.self)
+        let data = bundle.decode([String:Int].self, from: "DecodableDictionary.json")
+        XCTAssertEqual(data.count, 3, "Dictionary Contains 3 items")
+    }
+
+    func test_BindingOnChange() {
+        var onChangeFunctionRun = false
+
+        func exampleFunctionToCall() {
+            onChangeFunctionRun = true
+        }
+
+        var storedValue = ""
+
+        let binding = Binding {
+            storedValue
+        } set: {
+            newValue in
+            storedValue = newValue
+        }
+
+        let changedBinding = binding.onChange {
+            exampleFunctionToCall()
+        }
+
+        changedBinding.wrappedValue = "Test"
+        XCTAssertTrue(onChangeFunctionRun, "The onChange() function is run when the binding is changed")
+    }
 }

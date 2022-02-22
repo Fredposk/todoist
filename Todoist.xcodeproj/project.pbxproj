@@ -21,6 +21,8 @@
 		406B607527A1EB1800B22951 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406B607427A1EB1800B22951 /* Colors.xcassets */; };
 		4075C326279F3DB30058B900 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075C325279F3DB30058B900 /* Item-CoreDataHelpers.swift */; };
 		4075C328279F3F460058B900 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */; };
+		4078834D27C5595D00E5AEBE /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 4078834C27C5595D00E5AEBE /* DecodableDictionary.json */; };
+		4078834F27C5596E00E5AEBE /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 4078834E27C5596E00E5AEBE /* DecodableString.json */; };
 		4084C8A227A9C1CB00EC94E6 /* SequenceSorting+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */; };
 		4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD342798B0FD009C05A6 /* TodoistApp.swift */; };
 		4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD362798B0FD009C05A6 /* ContentView.swift */; };
@@ -68,6 +70,8 @@
 		406B607427A1EB1800B22951 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4075C325279F3DB30058B900 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		4078834C27C5595D00E5AEBE /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
+		4078834E27C5596E00E5AEBE /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SequenceSorting+Ext.swift"; sourceTree = "<group>"; };
 		4096AD312798B0FD009C05A6 /* Todoist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4096AD342798B0FD009C05A6 /* TodoistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistApp.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		4052948227BD9565009A5289 /* TodoistTests */ = {
 			isa = PBXGroup;
 			children = (
+				4078834B27C5592B00E5AEBE /* Fixtures */,
 				4052948327BD9565009A5289 /* TodoistTests.swift */,
 				4052948A27BD96CD009A5289 /* AssetTest.swift */,
 				40BAABB527BEE58E00B1E5F1 /* ProjectTests.swift */,
@@ -197,6 +202,15 @@
 				40BAAC0927C4396200B1E5F1 /* ExtensionTests.swift */,
 			);
 			path = TodoistTests;
+			sourceTree = "<group>";
+		};
+		4078834B27C5592B00E5AEBE /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				4078834C27C5595D00E5AEBE /* DecodableDictionary.json */,
+				4078834E27C5596E00E5AEBE /* DecodableString.json */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		4096AD282798B0FD009C05A6 = {
@@ -323,6 +337,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4078834F27C5596E00E5AEBE /* DecodableString.json in Resources */,
+				4078834D27C5595D00E5AEBE /* DecodableDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

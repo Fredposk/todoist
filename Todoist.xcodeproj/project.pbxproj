@@ -26,6 +26,7 @@
 		4078835127C5680400E5AEBE /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078835027C5680400E5AEBE /* PerformanceTests.swift */; };
 		4078835B27C6A90300E5AEBE /* TodoistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078835A27C6A90300E5AEBE /* TodoistUITests.swift */; };
 		4078835D27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078835C27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift */; };
+		4078836627C6E59B00E5AEBE /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078836527C6E59B00E5AEBE /* ProjectsViewModel.swift */; };
 		4084C8A227A9C1CB00EC94E6 /* SequenceSorting+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */; };
 		4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD342798B0FD009C05A6 /* TodoistApp.swift */; };
 		4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD362798B0FD009C05A6 /* ContentView.swift */; };
@@ -86,6 +87,7 @@
 		4078835827C6A90300E5AEBE /* TodoistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4078835A27C6A90300E5AEBE /* TodoistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistUITests.swift; sourceTree = "<group>"; };
 		4078835C27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4078836527C6E59B00E5AEBE /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SequenceSorting+Ext.swift"; sourceTree = "<group>"; };
 		4096AD312798B0FD009C05A6 /* Todoist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4096AD342798B0FD009C05A6 /* TodoistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistApp.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				40AB920227A694DC00414070 /* EditProjectView.swift */,
 				406B604C27A067F000B22951 /* ItemRowView.swift */,
 				406B604A27A05BD300B22951 /* EditItemView.swift */,
+				4078836527C6E59B00E5AEBE /* ProjectsViewModel.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				40E0C94E279B41C20098E3E2 /* HomeView.swift in Sources */,
 				4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */,
 				4075C326279F3DB30058B900 /* Item-CoreDataHelpers.swift in Sources */,
+				4078836627C6E59B00E5AEBE /* ProjectsViewModel.swift in Sources */,
 				406B604B27A05BD300B22951 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

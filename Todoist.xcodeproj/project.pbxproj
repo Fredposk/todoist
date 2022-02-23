@@ -23,6 +23,9 @@
 		4075C328279F3F460058B900 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */; };
 		4078834D27C5595D00E5AEBE /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 4078834C27C5595D00E5AEBE /* DecodableDictionary.json */; };
 		4078834F27C5596E00E5AEBE /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 4078834E27C5596E00E5AEBE /* DecodableString.json */; };
+		4078835127C5680400E5AEBE /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078835027C5680400E5AEBE /* PerformanceTests.swift */; };
+		4078835B27C6A90300E5AEBE /* TodoistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078835A27C6A90300E5AEBE /* TodoistUITests.swift */; };
+		4078835D27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078835C27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift */; };
 		4084C8A227A9C1CB00EC94E6 /* SequenceSorting+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */; };
 		4096AD352798B0FD009C05A6 /* TodoistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD342798B0FD009C05A6 /* TodoistApp.swift */; };
 		4096AD372798B0FD009C05A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4096AD362798B0FD009C05A6 /* ContentView.swift */; };
@@ -52,6 +55,13 @@
 			remoteGlobalIDString = 4096AD302798B0FD009C05A6;
 			remoteInfo = Todoist;
 		};
+		4078835E27C6A90300E5AEBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4096AD292798B0FD009C05A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4096AD302798B0FD009C05A6;
+			remoteInfo = Todoist;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +82,10 @@
 		4075C327279F3F460058B900 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		4078834C27C5595D00E5AEBE /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 		4078834E27C5596E00E5AEBE /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
+		4078835027C5680400E5AEBE /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		4078835827C6A90300E5AEBE /* TodoistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4078835A27C6A90300E5AEBE /* TodoistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistUITests.swift; sourceTree = "<group>"; };
+		4078835C27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4084C8A127A9C1CB00EC94E6 /* SequenceSorting+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SequenceSorting+Ext.swift"; sourceTree = "<group>"; };
 		4096AD312798B0FD009C05A6 /* Todoist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4096AD342798B0FD009C05A6 /* TodoistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoistApp.swift; sourceTree = "<group>"; };
@@ -99,6 +113,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		4052947E27BD9565009A5289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078835527C6A90300E5AEBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -200,6 +221,7 @@
 				40BAABB727BEEF9600B1E5F1 /* AwardTests.swift */,
 				40BAABEB27C3FA6500B1E5F1 /* DevelopmentTests.swift */,
 				40BAAC0927C4396200B1E5F1 /* ExtensionTests.swift */,
+				4078835027C5680400E5AEBE /* PerformanceTests.swift */,
 			);
 			path = TodoistTests;
 			sourceTree = "<group>";
@@ -213,11 +235,21 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		4078835927C6A90300E5AEBE /* TodoistUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4078835A27C6A90300E5AEBE /* TodoistUITests.swift */,
+				4078835C27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift */,
+			);
+			path = TodoistUITests;
+			sourceTree = "<group>";
+		};
 		4096AD282798B0FD009C05A6 = {
 			isa = PBXGroup;
 			children = (
 				4096AD332798B0FD009C05A6 /* Todoist */,
 				4052948227BD9565009A5289 /* TodoistTests */,
+				4078835927C6A90300E5AEBE /* TodoistUITests */,
 				4096AD322798B0FD009C05A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -227,6 +259,7 @@
 			children = (
 				4096AD312798B0FD009C05A6 /* Todoist.app */,
 				4052948127BD9565009A5289 /* TodoistTests.xctest */,
+				4078835827C6A90300E5AEBE /* TodoistUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,6 +309,24 @@
 			productReference = 4052948127BD9565009A5289 /* TodoistTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4078835727C6A90300E5AEBE /* TodoistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4078836227C6A90300E5AEBE /* Build configuration list for PBXNativeTarget "TodoistUITests" */;
+			buildPhases = (
+				4078835427C6A90300E5AEBE /* Sources */,
+				4078835527C6A90300E5AEBE /* Frameworks */,
+				4078835627C6A90300E5AEBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4078835F27C6A90300E5AEBE /* PBXTargetDependency */,
+			);
+			name = TodoistUITests;
+			productName = TodoistUITests;
+			productReference = 4078835827C6A90300E5AEBE /* TodoistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		4096AD302798B0FD009C05A6 /* Todoist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4096AD3F2798B0FF009C05A6 /* Build configuration list for PBXNativeTarget "Todoist" */;
@@ -307,6 +358,10 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 4096AD302798B0FD009C05A6;
 					};
+					4078835727C6A90300E5AEBE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4096AD302798B0FD009C05A6;
+					};
 					4096AD302798B0FD009C05A6 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -328,6 +383,7 @@
 			targets = (
 				4096AD302798B0FD009C05A6 /* Todoist */,
 				4052948027BD9565009A5289 /* TodoistTests */,
+				4078835727C6A90300E5AEBE /* TodoistUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -339,6 +395,13 @@
 			files = (
 				4078834F27C5596E00E5AEBE /* DecodableString.json in Resources */,
 				4078834D27C5595D00E5AEBE /* DecodableDictionary.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078835627C6A90300E5AEBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,12 +425,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4078835127C5680400E5AEBE /* PerformanceTests.swift in Sources */,
 				4052948B27BD96CD009A5289 /* AssetTest.swift in Sources */,
 				40BAABB827BEEF9600B1E5F1 /* AwardTests.swift in Sources */,
 				4052948427BD9565009A5289 /* TodoistTests.swift in Sources */,
 				40BAAC0A27C4396200B1E5F1 /* ExtensionTests.swift in Sources */,
 				40BAABB627BEE58E00B1E5F1 /* ProjectTests.swift in Sources */,
 				40BAABEC27C3FA6500B1E5F1 /* DevelopmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078835427C6A90300E5AEBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4078835B27C6A90300E5AEBE /* TodoistUITests.swift in Sources */,
+				4078835D27C6A90300E5AEBE /* TodoistUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +479,11 @@
 			isa = PBXTargetDependency;
 			target = 4096AD302798B0FD009C05A6 /* Todoist */;
 			targetProxy = 4052948527BD9565009A5289 /* PBXContainerItemProxy */;
+		};
+		4078835F27C6A90300E5AEBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4096AD302798B0FD009C05A6 /* Todoist */;
+			targetProxy = 4078835E27C6A90300E5AEBE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -464,6 +542,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Todoist.app/Todoist";
+			};
+			name = Release;
+		};
+		4078836027C6A90300E5AEBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AS4F3T75B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Frederico.TodoistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Todoist;
+			};
+			name = Debug;
+		};
+		4078836127C6A90300E5AEBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AS4F3T75B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Frederico.TodoistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Todoist;
 			};
 			name = Release;
 		};
@@ -651,6 +763,15 @@
 			buildConfigurations = (
 				4052948727BD9565009A5289 /* Debug */,
 				4052948827BD9565009A5289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4078836227C6A90300E5AEBE /* Build configuration list for PBXNativeTarget "TodoistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4078836027C6A90300E5AEBE /* Debug */,
+				4078836127C6A90300E5AEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

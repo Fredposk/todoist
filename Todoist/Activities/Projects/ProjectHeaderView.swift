@@ -13,12 +13,11 @@ struct ProjectHeaderView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(project.projectTitle)
-                    .font(.title)
-                    .foregroundColor(Color(project.projectColor))
-                ProgressView(value: project.completionAmount)
-                    .accentColor(Color(project.projectColor))
-            }
+                    Text(project.projectTitle)
+                        .foregroundColor(Color(project.projectColor))
+                    ProgressView(value: project.completionAmount)
+                        .accentColor(Color(project.projectColor))
+                }
             Spacer()
             NavigationLink(destination: EditProjectView(project: project)) {
                 Image(systemName: "square.and.pencil")
@@ -30,8 +29,10 @@ struct ProjectHeaderView: View {
     }
 }
 
-// struct ProjectHeaderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProjectHeaderView()
-//    }
-// }
+struct ProjectHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProjectHeaderView(project: .example)
+    }
+}
+
+

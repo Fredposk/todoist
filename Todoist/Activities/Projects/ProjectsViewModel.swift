@@ -10,7 +10,7 @@ import CoreData
 import SwiftUI
 
 extension ProjectsView {
-    class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
+    final class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
 
         var sortOrder = Item.SortOrder.optimized
 
@@ -24,7 +24,6 @@ extension ProjectsView {
         init(showClosedProjects: Bool, dataController: DataController) {
             self.showClosedProjects = showClosedProjects
             self.dataController = dataController
-            
             let request: NSFetchRequest<Project> = Project.fetchRequest()
             request.sortDescriptors = [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)]
             request.predicate = NSPredicate(format: "closed = %id", showClosedProjects )
@@ -44,7 +43,6 @@ extension ProjectsView {
             }
         }
 
-        
         func addItem(to project: Project) {
             let item = Item(context: dataController.container.viewContext)
             item.project = project
@@ -73,5 +71,4 @@ extension ProjectsView {
             }
         }
     }
-
 }

@@ -20,7 +20,6 @@ class AwardTests: BaseTestCase {
     }
 
     func test_NewUserAwardsShould_equalZero() {
-
         for award in awards {
             XCTAssertFalse(dataController.hasEarned(award: award), "New users should have not earned any awards")
         }
@@ -31,7 +30,7 @@ class AwardTests: BaseTestCase {
         for (count, value) in values.enumerated() {
 
             for _ in 0..<value {
-                let _ = Item(context: managedObjectContext)
+                _ = Item(context: managedObjectContext)
             }
             let matches = awards.filter { award in
                 award.criterion == "items" && dataController.hasEarned(award: award)

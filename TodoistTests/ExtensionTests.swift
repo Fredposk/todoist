@@ -46,8 +46,7 @@ class ExtensionTests: XCTestCase {
 
         let binding = Binding {
             storedValue
-        } set: {
-            newValue in
+        } set: { newValue in
             storedValue = newValue
         }
 

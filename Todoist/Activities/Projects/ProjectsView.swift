@@ -20,7 +20,7 @@ struct ProjectsView: View {
         let viewModel = ViewModel(showClosedProjects: showClosedProjects, dataController: dataController)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
- 
+
     var projectsList: some View {
         List {
             ForEach(viewModel.projects) { project in

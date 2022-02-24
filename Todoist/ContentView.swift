@@ -12,10 +12,9 @@ struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
     @EnvironmentObject var dataController: DataController
 
-
     var body: some View {
         TabView(selection: $selectedView) {
-            HomeView()
+            HomeView(dataController: dataController)
                 .tag(HomeView.tag)
                 .tabItem {
                     Image(systemName: "house")

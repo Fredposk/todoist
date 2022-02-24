@@ -23,12 +23,12 @@ class DataController: ObservableObject {
             if let error = error {
                 fatalError("Fatal error loading error: \(error.localizedDescription)")
             }
-            #if DEBUG
+#if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
                 UIView.setAnimationsEnabled(false)
                 self.deleteAll()
             }
-            #endif
+#endif
         }
     }
 
@@ -55,7 +55,7 @@ class DataController: ObservableObject {
     }()
 
     func createSampleData() throws {
-        
+
         let viewContext = container.viewContext
 
         for projectCounter in 1...5 {
@@ -116,7 +116,7 @@ class DataController: ObservableObject {
             return awardCount >= award.value
 
         default:
-//            fatalError("unknown award criterion: \(award.criterion)")
+            //            fatalError("unknown award criterion: \(award.criterion)")
             return false
         }
 

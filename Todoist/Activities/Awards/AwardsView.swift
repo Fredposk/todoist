@@ -40,8 +40,10 @@ struct AwardsView: View {
                         .accessibilityHint(Text(award.description))
                     }
                 }
+                .navigationViewStyle(.stack)
             }
             .navigationTitle("Awards")
+
         }
         .alert(isPresented: $showingAwardDetails) {
             getAwardAlert()

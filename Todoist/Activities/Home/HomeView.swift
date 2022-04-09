@@ -44,11 +44,11 @@ struct HomeView: View {
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
-            .toolbar {
-                Button("add data") {
-                    viewModel.addSampleData()
-                }
-            }
+//            .toolbar {
+//                Button("add data") {
+//                    viewModel.addSampleData()
+//                }
+//            }
         }
         .navigationViewStyle(.stack)
     }
